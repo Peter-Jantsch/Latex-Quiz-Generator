@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage[margin = .75in, includehead]{geometry}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{enumitem}
+\setlist{nosep}
+%\setlist{itemsep = .1cm, topsep = .1cm, itemindent = .5in, labelwidth = 10in}
+
+%%%%%%%%%%%%%%%%%%% Theorem Environments %%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+
+%%%%%%%%%%%%%%%%%%% Page Layout and Formatting %%%%%%%%%%%%%%%%%%%
+%\geometry{ margin=.75in, includehead, includefoot }
+\setlength{\headsep}{12pt}
+\setlength{\footskip}{12pt}
+%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Math 363 -- Mastery Check} \rhead{{\bf Name:} \studentname}
+\chead{} \lfoot{} \cfoot{} \rfoot{}
+
+
+%%%%%%%%%%%%%%%%%%% Some Commands %%%%%%%%%%%%%%%%%%%
+\newcommand{\myex}{\noindent{\bf Ex:}\,\,\,}
+\newcounter{pb}\setcounter{pb}{1}
+\newcommand{\myprob}[1]{\noindent{\bf LO#1:}\stepcounter{pb}}
+\newcommand{\inputprob}[2]{\input{../LO#1/363_LO#1_Q#2.tex}\pagebreak}
+\newcommand{\numprob}[2][\thepb]{\noindent{\bf Problem #1 [LO#2]:} \stepcounter{pb}}
+\newcommand{\ci}{\mathrm{i}} % Complex i
+\newcommand{\divi}{{\centering\noindent\rule{.75\textwidth}{.5pt}}}
+\newcommand{\bes}{\begin{equation*}}
+\newcommand{\ees}{\end{equation*}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+
+\begin{document}
+
+\input{info.tex}
+
+\end{document}
